@@ -1,0 +1,27 @@
+def swap(x,y):
+    temp = arr[x]
+    arr[x] = arr[y]
+    arr[y] = temp
+    return arr
+
+def partition(arr,l,h):
+    i = l-1
+    pivot = arr[h]
+
+    for j in range(l,h):
+        if arr[j] <= pivot:
+            i += 1
+            swap(i,j)
+    swap(h,i+1)
+    return i+1
+
+def quicksort(arr,l,h):
+    if l<h:
+        p = partition(arr,l,h)
+
+        quicksort(arr,p+1,h)
+        quicksort(arr,l,p-1)
+    return arr
+
+arr=[5,3,7,2,9,5,6]
+print(quicksort(arr,0,len(arr)-1))
