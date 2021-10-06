@@ -1,9 +1,5 @@
 
 /*
-Name : Omkar Gurav
-TE IT T3 Batch
-Roll No : 8048
-
 Write a program to solve the travelling salesman problem and to print the path and the cost using
 Dynamic Programming.
 */
