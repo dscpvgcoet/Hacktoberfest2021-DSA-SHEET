@@ -1,0 +1,7 @@
+class Solution:
+    def multiply(self, num1: str, num2: str) -> str:
+        ans = 0
+        for i, x in enumerate(num1[::-1]):
+            for j, y in enumerate(num2[::-1]):
+                ans += ((10**i)* int(x) * (10**j)* int(y))
+        return str(ans)
