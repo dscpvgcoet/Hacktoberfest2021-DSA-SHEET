@@ -19,3 +19,22 @@ public:
         return -1;
     }
 };
+
+int main()
+{
+    int N;
+    cout<<"Enter the value of N :- ";
+    cin>>N;
+    
+    vector<int> trust(N);
+    
+    for(int i = 0; i < N; i++)
+        cin>>trust[i];
+    
+    Solution obj;
+    
+    int ans = obj.findJudge(N, trust);
+    
+    cout<<ans;
+    
+}
