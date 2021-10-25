@@ -1,0 +1,19 @@
+
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        k=""
+        a=0
+        for i in s.lstrip():
+            if i in "+-0123456789" and a<2:
+                if i in "+-":
+                    a +=1
+                k+=i
+            else:
+                break        
+        try:
+            while k[-1] in "+-":
+                k=k[:len(k)-1]            
+            a=int(k)
+            return max(-2**31, min(a,2**31-1))           
+        except:
+            return 0
