@@ -1,4 +1,5 @@
 // Bubble sort using template functions for both assending and descending 
+// Start of the Bubble Sort Program
 #include <iostream>
 using namespace std;
 
@@ -88,3 +89,4 @@ int main()
         cout<<"\t"<<List[i];
  
 }
+// End of the program
